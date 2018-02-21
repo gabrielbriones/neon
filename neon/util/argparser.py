@@ -78,7 +78,7 @@ class NeonArgparser(configargparse.ArgumentParser):
             kwargs['add_config_file_help'] = False
 
         self.defaults = kwargs.pop('default_overrides', dict())
-        super(NeonArgparser, self).__init__(*args, **kwargs)
+        super(NeonArgparser, self).__init__(**kwargs)
 
         # ensure that default values are display via --help
         self.formatter_class = configargparse.ArgumentDefaultsHelpFormatter
